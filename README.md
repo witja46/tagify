@@ -10,8 +10,16 @@
  * Gandalfibialy / Jacek Kmiecik
  * dancingsushii / Tetiana Yakovenko
  * witja46 / Witold Jermakowicz
+
 ### Backend:
  * Qubasa / Luis Hebendanz
  * Marii19 / Mariusz Trzeciakiewicz
  * rz / Que Le
  * Lorak / Karol Rogoza
+
+## Dates
+4.6.2020: Sprint Planung
+8.6.2020: Erster Sprint
+
+Backend Repo:
+* https://github.com/Luis-Hebendanz/tagify-backend

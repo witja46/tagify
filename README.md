@@ -1,9 +1,9 @@
 ## Roles
 
-Scope: Tagging pictures with rectangles
-DevOps: Luis Hebendanz / Qubasa
-Scrum Master: Trilloyd / Jacob Bachmann
-Product Owner: Lorak / Karol Rogoza
+* Scope: Tagging pictures with rectangles
+* DevOps: Luis Hebendanz / Qubasa
+* Scrum Master: Trilloyd / Jacob Bachmann
+* Product Owner: Lorak / Karol Rogoza
 
 ### Frontend:
  * trilloyd / Jacob Bachmann

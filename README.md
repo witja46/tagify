@@ -23,3 +23,5 @@
 
 Backend Repo:
 * https://github.com/Luis-Hebendanz/tagify-backend
+Frontend Repo:
+* https://github.com/Luis-Hebendanz/tagify-frontend

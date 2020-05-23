@@ -5,12 +5,12 @@ DevOps: Luis Hebendanz / Qubasa
 Scrum Master: Trilloyd / Jacob Bachmann
 Product Owner: Lorak / Karol Rogoza
 
-###Frontend:
+### Frontend:
  * trilloyd / Jacob Bachmann
  * Gandalfibialy / Jacek Kmiecik
  * dancingsushii / Tetiana Yakovenko
  * witja46 / Witold Jermakowicz
-###Backend:
+### Backend:
  * Qubasa / Luis Hebendanz
  * Marii19 / Mariusz Trzeciakiewicz
  * rz / Que Le

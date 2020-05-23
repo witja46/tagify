@@ -18,8 +18,8 @@
  * Lorak / Karol Rogoza
 
 ## Dates
-4.6.2020: Sprint Planung
-8.6.2020: Erster Sprint
+* 4.6.2020: Sprint Planing
+* 8.6.2020: First Sprint
 
 Backend Repo:
 * https://github.com/Luis-Hebendanz/tagify-backend

@@ -1,3 +1,9 @@
+## Clone this repository with all submodules
+```
+$ git clone --recurse-submodules -j8 git@github.com:Luis-Hebendanz/tagify.git
+```
+
+
 ## Development setup for the backend
 Setup docker https://docs.docker.com/get-docker/  
 Install docker-compose: https://docs.docker.com/compose/install/#install-compose  
@@ -130,7 +136,7 @@ Ein Beispiel wäre [Visual Studio Code](https://code.visualstudio.com/) oder vim
 * 4.6.2020: Sprint Planing
 * 8.6.2020: First Sprint
 
-Backend Repo:
-* https://github.com/Luis-Hebendanz/tagify-backend
-Frontend Repo:
-* https://github.com/Luis-Hebendanz/tagify-frontend
+* Backend Repo:
+ https://github.com/Luis-Hebendanz/tagify-backend
+* Frontend Repo:
+ https://github.com/Luis-Hebendanz/tagify-frontend

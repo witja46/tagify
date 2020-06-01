@@ -1,7 +1,7 @@
 import React from "react";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 
-import logo from "./assets/TU-Berlin-Logo-Gray.svg";
+import logo from "../assets/TU-Berlin-Logo-Gray.svg";
 
 const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
@@ -56,14 +56,14 @@ export const Impressum = () => {
           <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
 
           <p>
-            Jacek Kmiecik
-            Tetiana Yakovenko
-            Jacob Bachmann
-            Witold Jermakowicz
-            Mariusz Trzeciakiewicz
-            Que Le
-            Karol Rogoza
-            Luis Hebendanz
+            Jacek Kmiecik,
+            Tetiana Yakovenko,
+            Jacob Bachmann,
+            Witold Jermakowicz,
+            Mariusz Trzeciakiewicz,
+            Que Le,
+            Karol Rogoza,
+            Luis Hebendanz,
             <br />
             Straße des 17. Juni 135<br />
             10623 Berlin

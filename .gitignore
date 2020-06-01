@@ -1,0 +1,12 @@
+.envrc
+app/backend/target
+node_modules
+app/.cache
+app/debug_dist
+.direnv
+.history
+.__pycache__
+.envrc
+.direnv
+.history
+.__pycache__

@@ -1,0 +1,6 @@
+[submodule "tagify-frontend"]
+	path = app/frontend
+	url = git@github.com:Luis-Hebendanz/tagify-frontend.git
+[submodule "app/backend"]
+	path = app/backend
+	url = git@github.com:Luis-Hebendanz/tagify-backend.git

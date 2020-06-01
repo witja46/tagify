@@ -1,0 +1,41 @@
+{
+  "name": "tagify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "parcel watch -t browser --cache-dir app/.cache -d app/debug_dist app/frontend/*.html app/frontend/*.tsx --public-url app/debug_dist",
+    "clean-backend": "rm -rf app/backend/target && docker-compose stop && docker-compose rm",
+    "serve-backend": "docker-compose up -d && cd app/backend && systemfd --no-pid -s http::5000 -- cargo watch -x run",
+    "build-backend": "cd app/backend && cargo build --release",
+    "clean-frontend": "rm -rf app/dist app/debug_dist",
+    "serve-frontend": "parcel serve -t browser --cache-dir app/.cache -d app/debug_dist app/frontend/*.html",
+    "build-frontend": "parcel build -d app/dist --no-cache --detailed-report -t browser app/frontend/*.html --public-url app/dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@date-io/core": "^1.3.13",
+    "@material-ui/core": "^4.9.13",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.40",
+    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/styles": "^4.9.0",
+    "classnames": "^2.2.6",
+    "clsx": "^1.0.4",
+    "date-fns": "^2.13.0",
+    "@date-io/date-fns": "^1.3.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-waypoint": "^9.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.5"
+  }
+}

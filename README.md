@@ -1,7 +1,10 @@
 ## Clone this repository with all submodules
+Make sure that your ssh key is added to your github account.
+If this is not the case follow these instructions: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 ```
 $ git clone --recurse-submodules -j8 git@github.com:Luis-Hebendanz/tagify.git
 ```
+Files in .gitignore are being ignored globally (for everyone!) by git. If you want to exclude files locally add them to `.git/info/exclude`  
 
 
 ## Development setup for the backend

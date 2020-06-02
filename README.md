@@ -86,7 +86,7 @@ $ npm run serve-frontend
 and you have to specify the file after the base url.
 Example: `http://localhost:1234/login.html`
 
-If you need to do transactions with the backend then follow the [development setup for the backend](#development-setup-for-the-backend)
+If you need to do transactions with the backend then follow the [development setup for the backend](#development-setup-for-the-backend)  
 Afterwards execute:
 ```
 $ npm run watch

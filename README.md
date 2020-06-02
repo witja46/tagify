@@ -15,6 +15,9 @@ Who can merge pull requests?
 * tagify-backend: Qubasa
 * tagify-frontend: Jacob
 
+## Wiki
+As the Github Wiki does not work with pull requests and everyone would need to have write access to the main repo,  
+we instead use https://www.notion.so/Product-Wiki-60ff8ad4a94c485f82e856d1bef75a35
 
 ## Development setup for the backend
 Setup docker https://docs.docker.com/get-docker/  

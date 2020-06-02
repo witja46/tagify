@@ -25,7 +25,7 @@ import { Impressum } from "./components/Impressum";
 const myTheme = createMuiTheme({
   palette: {
     type: "light",
-    primary: blue, 
+    primary: blue,
   }
 });
 
@@ -47,12 +47,12 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
         <CssBaseline />
-        <TagifyAppBar/>
+        <TagifyAppBar />
         <Container className={classes.main}>
           <Box my={8}>
-            <Route exact path="/" component={Welcome}/>
-            <Route path="/home" component={UserBoard}/>
-            <Route path="/impressum" component={Impressum}/>
+            <Route exact path="/" component={Welcome} />
+            <Route path="/home" component={UserBoard} />
+            <Route path="/impressum" component={Impressum} />
           </Box>
         </Container>
       </ThemeProvider>

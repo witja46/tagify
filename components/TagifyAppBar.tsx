@@ -36,8 +36,17 @@ export const TagifyAppBar = () => {
   ];
 
   /**
+   * This function maps a given route to itself, if it starts with
+   * a route from a given list or else to false.
+   * This is needed because of the TabBar, that has Tabs
+   * for only some of possible routes of the application.
    * 
-   * @param path 
+   * If e.g. the only routes that are defined within the TabBar are
+   * "/foo" and "/bar" and the current route is "/" than a error
+   * is thrown, that the value "/" is illegal within the TabBar.
+   * 
+   * 
+   * @param path The current route.
    */
   function mapRoute(path: string): string | boolean {
     return routes.map(route =>

@@ -35,6 +35,8 @@ This clears the build directory and the postgres database
 
 Read more information about [hot reload](https://actix.rs/docs/autoreload/)
 
+To be able to serve a webpage follow the [development setup for the frontend](#development-setup-for-the-frontend)
+
 
 ## Setup rust-language server
 Having a working [language server](https://en.wikipedia.org/wiki/Language_Server_Protocol) is extremly recommended for Rust!
@@ -84,8 +86,8 @@ $ npm run serve-frontend
 and you have to specify the file after the base url.
 Example: `http://localhost:1234/login.html`
 
-If you need to do transactions with the backend then
-you have to follow the backend development setup after which you execute:
+If you need to do transactions with the backend then follow the [development setup for the backend](#development-setup-for-the-backend)
+Afterwards execute:
 ```
 $ npm run watch
 $ npm run backend-serve

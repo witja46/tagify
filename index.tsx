@@ -1,5 +1,11 @@
-import React from "react";
+import React, { Props, Component, ReactElement, ReactNode } from "react";
 import ReactDOM from "react-dom";
+import {
+  Route,
+  NavLink,
+  HashRouter,
+  BrowserRouter
+} from "react-router-dom";
 import {
   CssBaseline,
   createMuiTheme,
@@ -7,7 +13,13 @@ import {
   IconButton,
   Typography,
   Button,
-  Toolbar
+  Toolbar,
+  useScrollTrigger,
+  Slide,
+  Container,
+  Box,
+  Tabs,
+  Tab
 } from "@material-ui/core";
 import {
   ThemeProvider,
@@ -16,8 +28,9 @@ import {
   createStyles
 } from "@material-ui/core/styles";
 import { Impressum } from "./components/Impressum";
-import { red, grey, blue } from "@material-ui/core/colors";
+import { blue } from "@material-ui/core/colors";
 import MenuIcon from '@material-ui/icons/Menu';
+import { Welcome } from "./components/Welcome";
 
 const myTheme = createMuiTheme({
   palette: {
@@ -49,58 +62,48 @@ const useStyles = makeStyles((_theme: Theme) =>
   })
 );
 
-enum RenderPage {
-  LIST,
-  ADD,
-  EDIT,
-  IMPRESSUM
+
+function HideOnScroll(props: Props<ReactNode>) {
+  const { children } = props;
+  const trigger = useScrollTrigger();
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
 }
 
 function App() {
   const classes = useStyles(myTheme);
 
-  const [renderPage, setRenderPage] = React.useState<RenderPage>(
-    RenderPage.IMPRESSUM
-  );
-
-  function Content() {
-    switch (renderPage) {
-      case RenderPage.LIST:
-        return null;
-      case RenderPage.ADD:
-        return null;
-      case RenderPage.EDIT:
-        return null;
-      case RenderPage.IMPRESSUM:
-        return <Impressum />
-      default:
-        console.error("Default case reached");
-        return null;
-    }
-  }
-
   return (
-    <div>
-      <ThemeProvider theme={myTheme}>
-        <CssBaseline />
-        <div className={classes.appBar} >
-          <AppBar position="static" >
-            <Toolbar>
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" className={classes.title}>
-                Tagify
-              </Typography>
-              <Button color="inherit">Login</Button>
-            </Toolbar>
-          </AppBar>
-        </div>
-        <main className={classes.main}>
-          <Content />
-        </main>
-      </ThemeProvider>
-    </div>
+    <BrowserRouter>
+      <div>
+        <ThemeProvider theme={myTheme}>
+          <CssBaseline />
+          <HideOnScroll>
+            <AppBar >
+              <Toolbar>
+                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" className={classes.title}>
+                  Tagify
+                </Typography>
+                <Button color="inherit">Login</Button>
+              </Toolbar>
+            </AppBar>
+          </HideOnScroll>
+          <Container className={classes.main}>
+            <Box my={10}>
+              <Route exact path="/" component={Welcome}/>
+              <Route path="/impressum" component={Impressum}/>
+            </Box>
+          </Container>
+        </ThemeProvider>
+      </div>
+    </BrowserRouter>
   );
 }
 

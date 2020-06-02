@@ -9,7 +9,7 @@ $ git clone --recurse-submodules -j8 git@github.com:Luis-Hebendanz/tagify.git
 Files in .gitignore are being ignored globally (for everyone!) by git. If you want to exclude files locally add them to `.git/info/exclude`  
 
 ## Working with pull requests
-If you want to know how to create a pull request: https://www.youtube.com/watch?v=rgbCcBNZcdQ
+If you want to know how to create a pull request watch this video: https://www.youtube.com/watch?v=rgbCcBNZcdQ  
 Who can merge pull requests? 
 * tagify: Qubasa
 * tagify-backend: Qubasa

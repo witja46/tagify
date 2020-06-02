@@ -1,7 +1,3 @@
-KAROL TEST
-pull request
-
-
 
 ## Clone this repository with all submodules
 Make sure that your ssh key is added to your github account.

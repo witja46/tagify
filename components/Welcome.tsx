@@ -4,7 +4,7 @@ import React from "react";
 export const Welcome = () => {
   return (
     <div>
-      Main Content
+      <h5>Welcome Page</h5>
     </div>
   )
 }

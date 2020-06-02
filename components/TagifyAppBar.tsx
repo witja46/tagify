@@ -21,7 +21,7 @@ const useStyles = makeStyles((_theme: Theme) =>
       flexGrow: 1,
     },
     tabBarItems: {
-      
+
     },
   })
 );
@@ -30,10 +30,24 @@ export const TagifyAppBar = () => {
 
   const classes = useStyles();
 
+  const routes: Array<string> = [
+    "/home",
+    "/impressum"
+  ];
+
+  /**
+   * 
+   * @param path 
+   */
+  function mapRoute(path: string): string | boolean {
+    return routes.map(route =>
+      path.startsWith(route)).some(val => val === true) ? path : false;
+  }
+
   const HideOnScroll = (props: Props) => {
     const { children } = props;
     const trigger = useScrollTrigger();
-  
+
     return (
       <Slide appear={false} direction="down" in={!trigger}>
         {children}
@@ -52,30 +66,30 @@ export const TagifyAppBar = () => {
   );
 
   const TabBar = () => (
-    <Tabs value={location.pathname} className={classes.tabBar} centered={true}>
-      <Tab icon={<HomeIcon/>} value="/home" component={Link} to={"/home"} className={classes.tabBarItems}/>
-      <Tab label="Impressum" value="/impressum" component={Link} to={"/impressum"} className={classes.tabBarItems}/>
+    <Tabs value={mapRoute(location.pathname)} className={classes.tabBar} centered={true}>
+      <Tab icon={<HomeIcon />} value="/home" component={Link} to={"/home"} className={classes.tabBarItems} />
+      <Tab label="§" value="/impressum" component={Link} to={"/impressum"} className={classes.tabBarItems} />
     </Tabs>
   );
 
   const LoginButton = () => (
     <IconButton color="inherit">
-      <PersonIcon/>
+      <PersonIcon />
     </IconButton>
   );
 
   return (
-    <Route path="/" render={() => 
+    <Route path="/" render={() =>
       <HideOnScroll>
         <AppBar >
           <Toolbar>
-            <MenuButton/>
-            <Title/>
-            <TabBar/>
-            <LoginButton/>
+            <MenuButton />
+            <Title />
+            <TabBar />
+            <LoginButton />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-    }/>
+    } />
   )
 }

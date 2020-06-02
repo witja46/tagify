@@ -23,6 +23,9 @@ const useStyles = makeStyles((_theme: Theme) =>
         width: "75%"
       },
       color: "gray"
+    },
+    centered: {
+      textAlign: "center",
     }
   })
 );
@@ -53,22 +56,31 @@ export const Impressum = () => {
     <div className={classes.root}>
       <div className={classes.line}>
         <div className={classes.text}>
-          <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-
-          <p>
-            Jacek Kmiecik,
-            Tetiana Yakovenko,
-            Jacob Bachmann,
-            Witold Jermakowicz,
-            Mariusz Trzeciakiewicz,
-            Que Le,
-            Karol Rogoza,
-            Luis Hebendanz,
-            <br />
-            Straße des 17. Juni 135<br />
-            10623 Berlin
-          </p>
-
+          <div className={classes.centered}>
+            <h1>
+              Impressum
+            </h1>
+            <hr style={{color: "Gainsboro"}}/>
+            <p>
+              Jacek Kmiecik,
+              Tetiana Yakovenko,
+              Jacob Bachmann,
+              Witold Jermakowicz, <br />
+              Mariusz Trzeciakiewicz,
+              Que Le,
+              Karol Rogoza,
+              Luis Hebendanz
+            </p>
+            <img src={logo} width="52" height="38" />
+            <p>
+              Straße des 17. Juni 135<br />
+              10623 Berlin
+            </p>
+            <hr style={{color: "Gainsboro"}}/>
+            <h2>
+              Angaben gem&auml;&szlig; &sect; 5 TMG
+            </h2>
+          </div>
           <h3>Haftung f&uuml;r Inhalte</h3>
           <p>
             Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen Seiten

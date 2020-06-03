@@ -28,8 +28,10 @@ const useStyles = makeStyles((_theme: Theme) =>
   })
 );
 
-export const TagifyAppBar = () => {
+export const TagifyAppBar = (props: Props) => {
   const classes = useStyles();
+
+  const { toggleLeftDrawer, toggleRightDrawer } = props;
 
   const routes: Array<string> = ["/home", "/impressum"];
 
@@ -45,6 +47,7 @@ export const TagifyAppBar = () => {
    *
    *
    * @param path The current route.
+   * @returns The input path, if valid, else false
    */
   function mapRoute(path: string): string | boolean {
     return routes
@@ -71,6 +74,7 @@ export const TagifyAppBar = () => {
       className={classes.menuButton}
       color="inherit"
       aria-label="menu"
+      onClick={toggleLeftDrawer(true)}
     >
       <MenuIcon />
     </IconButton>
@@ -111,7 +115,7 @@ export const TagifyAppBar = () => {
   );
 
   const LoginButton = () => (
-    <IconButton color="inherit">
+    <IconButton color="inherit" onClick={toggleRightDrawer(true)}>
       <PersonIcon />
     </IconButton>
   );

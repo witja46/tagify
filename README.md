@@ -1,15 +1,40 @@
 
-## Clone this repository with all submodules
+## Fork this repository and all submodules
 Make sure that your ssh key is added to your github account.
 If this is not the case follow these instructions: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent  
-Afterwards execute:
-```
-$ git clone --recurse-submodules -j8 git@github.com:Luis-Hebendanz/tagify.git
-```
-Files in .gitignore are being ignored globally (for everyone!) by git. If you want to exclude files locally add them to `.git/info/exclude`  
+You have to fork the main tagify repository and the tagify-frontend or tagify-backend repository if you want to be able to submit pull requests to it.  
+If you want to know how to create a pull request / fork a repo watch this video: https://www.youtube.com/watch?v=rgbCcBNZcdQ  
 
-## Working with pull requests
-If you want to know how to create a pull request watch this video: https://www.youtube.com/watch?v=rgbCcBNZcdQ  
+Now clone your forked version of the main tagify repo (replace <username> with your username):
+```
+$ git clone --recurse-submodules -j8 git@github.com:<username>/tagify.git
+```
+And replace the repository url in the submodule `app/backend` if you have forked the tagify-backend repo  
+or replace the remote url in the `app/frontend` submodule if you have forked the tagify-frontend repository.  
+Example for `app/backend`:
+```
+$ cd tagify
+$ git remote set-url origin git@github.com:<username>/tagify-backend.git
+$ cd app/backend
+$ git checkout master
+```
+After you have changed something and you want it to be commited to upstream make a pull request!  
+How to do that is explained in the linked video above :)
+
+**IMPORTANT:** `git pull` does not work in forked repositories. If you want to update your fork / submodule execute:
+```
+# Add the remote, call it "upstream":
+$ git remote add upstream https://github.com/whoever/whatever.git
+
+# Make sure that you're on your master branch:
+$ git checkout master
+
+# Download all changes from upstream and apply them to current branch
+$ git pull upstream
+```
+
+## Who has merge rights?
+Files in .gitignore are being ignored globally (for everyone!) by git. If you want to exclude files locally add them to `.git/info/exclude`  
 Who can merge pull requests? 
 * tagify: Qubasa
 * tagify-backend: Qubasa

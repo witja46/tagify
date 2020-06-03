@@ -1,32 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Route,
-  BrowserRouter
-} from "react-router-dom";
-import {
-  CssBaseline,
-  createMuiTheme,
-  Container,
-  Box,
-} from "@material-ui/core";
-import {
-  ThemeProvider,
-  Theme,
-  makeStyles,
-  createStyles
-} from "@material-ui/core/styles";
-import { blue } from "@material-ui/core/colors";
-import { TagifyAppBar } from "./components/TagifyAppBar";
-import { Welcome } from "./components/Welcome";
-import { UserBoard } from "./components/UserBoard";
-import { Impressum } from "./components/Impressum";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import { Box, Container, createMuiTheme, CssBaseline } from '@material-ui/core';
+import { blue } from '@material-ui/core/colors';
+import { createStyles, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
+
+import { Impressum } from './components/Impressum';
+import { TagifyAppBar } from './components/TagifyAppBar';
+import { UserBoard } from './components/UserBoard';
+import { Welcome } from './components/Welcome';
 
 const myTheme = createMuiTheme({
   palette: {
     type: "light",
     primary: blue,
-  }
+  },
 });
 
 const useStyles = makeStyles((_theme: Theme) =>
@@ -35,7 +24,7 @@ const useStyles = makeStyles((_theme: Theme) =>
       display: "flex",
       justifyContent: "center",
       overflow: "auto",
-      flexGrow: 1
+      flexGrow: 1,
     },
   })
 );

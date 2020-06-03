@@ -131,6 +131,19 @@ export const Impressum = () => {
             ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung
             von Werbeinformationen, etwa durch Spam-Mails, vor.
           </p>
+          <div>
+            Icons erstellt von{" "}
+            <a
+              href="https://www.flaticon.com/de/autoren/metropolicons"
+              title="Metropolicons"
+            >
+              Metropolicons
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/de/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import { createStyles, makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     content: {
+      paddingTop: "30px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -36,7 +37,6 @@ export const UserProfileDrawer = (props: Props) => {
       >
         <div className={classes.content}>
           <AccountCircleIcon style={{ fontSize: 80 }} />
-          <img src="https://loremflickr.com/320/240?lock=1" />
           <form className={classes.form} noValidate autoComplete="off">
             <TextField
               required

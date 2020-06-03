@@ -21,10 +21,14 @@ $ git checkout master
 After you have changed something and you want it to be commited to upstream make a pull request!  
 How to do that is explained in the linked video above :)
 
-**IMPORTANT:** `git pull` does not work in forked repositories. If you want to update your fork / submodule execute:
+**IMPORTANT:** `git pull` does not work in forked repositories.
+If you want to update your fork / submodule follow these instructions that use the `app/backend` submodule as an example:
 ```
+# Go to the backend submodule
+$ cd app/backend
+
 # Add the remote, call it "upstream":
-$ git remote add upstream https://github.com/whoever/whatever.git
+$ git remote add upstream git@github.com:Luis-Hebendanz/tagify-backend.git
 
 # Make sure that you're on your master branch:
 $ git checkout master

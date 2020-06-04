@@ -130,12 +130,12 @@ $ npm run serve-frontend
 and you have to specify the file after the base url.
 Example: `http://localhost:1234/login.html`
 
-If you need to do transactions with the backend then follow the [development setup for the backend](#development-setup-for-the-backend)  
-Afterwards execute:
+If you need to do transactions with the backend then execute this:
 ```
 $ npm run watch
-$ npm run backend-serve
 ```
+
+And then follow the [development setup for the backend](#development-setup-for-the-backend)  
 
 To build for production execute:
 ```

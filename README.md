@@ -49,6 +49,9 @@ As the Github Wiki does not work with pull requests and everyone would need to h
 we instead use https://www.notion.so/cd7c14a65aa048df95d94218271630a2?v=7a2bd31643af49959dcb164c8583931e
 
 ## Development setup for the backend
+First follow the [development setup for the frontend](#development-setup-for-the-frontend)  
+Afterwards come back here.
+
 Setup docker https://docs.docker.com/get-docker/  
 Install docker-compose: https://docs.docker.com/compose/install/#install-compose  
 

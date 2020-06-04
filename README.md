@@ -117,7 +117,7 @@ $ apt install nodejs
 ```
 Install js frontend dependencies with npm from package.json:
 ```
-$ cd PPSky/Abgabe1
+$ cd tagify
 $ npm install
 ```
 

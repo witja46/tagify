@@ -6,6 +6,7 @@
   "scripts": {
     "watch": "parcel watch -t browser --cache-dir app/.cache -d app/debug_dist app/frontend/*.html app/frontend/*.tsx --public-url app/debug_dist",
     "clean-backend": "rm -rf app/backend/target && docker-compose stop && docker-compose rm",
+    "update":"git submodule update --rebase --remote",
     "serve-backend": "docker-compose up -d && cd app/backend && systemfd --no-pid -s http::5000 -- cargo watch -x run",
     "build-backend": "cd app/backend && cargo build --release",
     "clean-frontend": "rm -rf app/dist app/debug_dist",

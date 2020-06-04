@@ -36,9 +36,9 @@ $ git checkout master
 # Download all changes from upstream and apply them to current branch
 $ git pull upstream
 ```
+Note: Files in .gitignore are being ignored globally (for everyone!) by git. If you want to exclude files locally add them to `.git/info/exclude`  
 
 ## Who has merge rights?
-Files in .gitignore are being ignored globally (for everyone!) by git. If you want to exclude files locally add them to `.git/info/exclude`  
 Who can merge pull requests? 
 * tagify: Qubasa
 * tagify-backend: Qubasa
@@ -71,16 +71,13 @@ $ npm run serve-backend
 The website should now be browsable
 on http://127.0.0.1:5000
 
-Also very useful is the command:
+Also a very useful is the command:
 ```
 $ npm run clean-backend
 ```
 This clears the build directory and the postgres database
 
 Read more information about [hot reload](https://actix.rs/docs/autoreload/)
-
-To be able to serve a webpage follow the [development setup for the frontend](#development-setup-for-the-frontend)
-
 
 ## Setup rust-language server
 Having a working [language server](https://en.wikipedia.org/wiki/Language_Server_Protocol) is extremly recommended for Rust!

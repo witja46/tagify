@@ -14,8 +14,8 @@ or replace the remote url in the `app/frontend` submodule if you have forked the
 Example for `app/backend`:
 ```
 $ cd tagify
-$ git remote set-url origin git@github.com:<username>/tagify-backend.git
 $ cd app/backend
+$ git remote set-url origin git@github.com:<username>/tagify-backend.git
 $ git checkout master
 ```
 After you have changed something and you want it to be commited to upstream make a pull request!  

@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 
-import placeholder from '../assets/Placeholder.svg';
+import placeholder from '../../assets/Placeholder.svg';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

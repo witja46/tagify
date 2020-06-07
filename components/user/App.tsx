@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 
-import { Box, Container, createMuiTheme, CssBaseline } from '@material-ui/core';
-import { blue } from '@material-ui/core/colors';
-import { createStyles, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
+import { Box, Container } from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-import { Welcome } from '../guest/Welcome';
 import { Impressum } from '../Impressum';
 import { DashBoard } from './DashBoard';
-import { NavigationDrawer } from './NavigationDrawer';
-import { TagifyAppBar } from './TagifyAppBar';
+import { NavBar } from './NavBar';
+import { NavDrawer } from './NavDrawer';
+import { Settings } from './Settings';
 import { UserProfileDrawer } from './UserProfileDrawer';
-
-const myTheme = createMuiTheme({
-  palette: {
-    type: "light",
-    primary: blue,
-  },
-});
 
 const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
@@ -32,8 +24,8 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 export type Anchor = "left" | "right";
 
-export const App = () => {
-  const classes = useStyles(myTheme);
+export function App() {
+  const classes = useStyles();
 
   const [drawerState, setDrawerState] = useState({
     left: false,
@@ -56,9 +48,8 @@ export const App = () => {
   };
 
   return (
-    <ThemeProvider theme={myTheme}>
-      <CssBaseline />
-      <NavigationDrawer
+    <>
+      <NavDrawer
         anchor={"left" as Anchor}
         state={drawerState["left" as Anchor]}
         toggle={toggleDrawer.bind(null, "left" as Anchor)}
@@ -69,17 +60,17 @@ export const App = () => {
         toggle={toggleDrawer.bind(null, "right" as Anchor)}
       />
 
-      <TagifyAppBar
+      <NavBar
         toggleLeftDrawer={toggleDrawer.bind(null, "left" as Anchor)}
         toggleRightDrawer={toggleDrawer.bind(null, "right" as Anchor)}
       />
       <Container className={classes.main}>
         <Box my={8}>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/home" component={DashBoard} />
+          <Route exact path="/" component={DashBoard} />
           <Route path="/impressum" component={Impressum} />
+          <Route path="/settings" component={Settings} />
         </Box>
       </Container>
-    </ThemeProvider>
+    </>
   );
-};
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import {
     createStyles, Divider, List, ListItem, ListItemIcon, ListItemText, makeStyles, SwipeableDrawer,
-    Typography
+    Theme, Typography
 } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const NavigationDrawer = (props: Props) => {
+export const NavDrawer = (props: Props) => {
   const { anchor, state, toggle } = props;
 
   const classes = useStyles();
@@ -57,7 +57,7 @@ export const NavigationDrawer = (props: Props) => {
             key={"home"}
             button
             component={Link}
-            to={"/home"}
+            to={"/"}
             onClick={toggle(false)}
           >
             <ListItemIcon>

@@ -36,6 +36,7 @@ export const UserProfileDrawer = (props: Props) => {
         onOpen={toggle(true)}
       >
         <div className={classes.content}>
+          <h5>--- DEPRECATED, WILL BE CHANGED LATER ---</h5>
           <AccountCircleIcon style={{ fontSize: 80 }} />
           <form className={classes.form} noValidate autoComplete="off">
             <TextField
@@ -52,6 +53,7 @@ export const UserProfileDrawer = (props: Props) => {
               autoComplete="current-password"
             />
             <Button>Login</Button>
+            <h5>--- DEPRECATED, WILL BE CHANGED LATER ---</h5>
           </form>
         </div>
       </SwipeableDrawer>
